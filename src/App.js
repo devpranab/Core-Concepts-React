@@ -2,21 +2,23 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
+  //js code
+  let name = "Pranav Sarkar";
+  let person = {
+    name: "Ashik Sarkar",
+    job: 'Doctor'
+  }
+  let style = {
+    color: 'red',
+    backgroundColor: 'yellow'
+  }
+  return ( //jsx syntax
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-header"> 
+        <img src={logo} className="App-logo" alt="logo" /> 
+        <h1 style={style}>Who: {person.name +" "+ person.job}</h1>
+        <p>My name is {name}</p> {/* {js code} */}
+        
       </header>
     </div>
   );
