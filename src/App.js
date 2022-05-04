@@ -1,27 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  //js code
-  let name = "Pranav Sarkar";
-  let person = {
-    name: "Ashik Sarkar",
-    job: 'Doctor'
-  }
-  let style = {
-    color: 'red',
-    backgroundColor: 'yellow'
-  }
-  return ( //jsx syntax
+  return ( 
     <div className="App">
-      <header className="App-header"> 
-        <img src={logo} className="App-logo" alt="logo" /> 
-        <h1 style={style}>Who: {person.name +" "+ person.job}</h1>
-        <p>My name is {name}</p> {/* {js code} */}
-        
-      </header>
+
+      <h2>App Component</h2>
+    <Person/>
+    <Person/>
     </div>
   );
+}
+
+function Person(){
+  const personStyle = {
+    border: '2px solid blue',
+    margin: '10px'
+  }
+  return (
+    <div style={personStyle}>
+      <h1>Person Component</h1>
+      <p>Something of Person</p>
+    </div>
+  )
 }
 
 export default App;
