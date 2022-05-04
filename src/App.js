@@ -1,14 +1,37 @@
 import './App.css';
 
 function App() {
+  const nayoks = ['Tiger', 'Sahid', 'Ranveer', 'Akshay', 'Sharukh'];
   const products = [
     {name: 'Photoshop', price: '$90.99'},
     {name: 'Illustrator', price: '$60.99'},
     {name: 'Pdf Reader', price: '$40.99'}
   ]
+  //Map for dynamic
+  //const productNames = products.map(product => product.name);
+
   return ( 
     <div className="App">
+<ul>
+  {
+    nayoks.map(nayok => <li>{nayok}</li>)
+  }
+    {
+    products.map(product => <li>{product.name}</li>)
+  }
+  {/* <li>{nayoks[0]}</li>
+  <li>{nayoks[1]}</li>
+  <li>{nayoks[2]}</li>
+  <li>{nayoks[3]}</li>
+  <li>{nayoks[4]}</li> */}
+</ul>
+
       <h2>App Component</h2>
+
+    {
+      products.map(product => <Product product={product}></Product>)
+    }
+
       <Product product={products[0]}></Product>
       <Product product={products[1]}></Product>
 
@@ -28,6 +51,7 @@ function Product(props){
     width: '200px',
  
   }
+  //destructure
   const {name, price} = props.product;
   return(
     <div style={productStyle}>
