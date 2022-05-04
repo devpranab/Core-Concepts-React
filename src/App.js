@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
   return ( 
     <div className="App">
+      <Counter></Counter>
 <ul>
   {
     nayoks.map(nayok => <li>{nayok}</li>)
@@ -40,6 +42,15 @@ function App() {
     <Person name="Siraj" job="Developer"></Person>
     </div>
   );
+}
+
+function Counter(){
+  const [count, setCount] = useState(0);
+  return(
+    <div>
+      <h1>Count: {count}</h1>
+    </div>
+  )
 }
 
 function Product(props){
