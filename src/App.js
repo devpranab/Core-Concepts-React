@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import UsersCom from './components/UsersCom';
 
 function App() {
   const nayoks = ['Tiger', 'Sahid', 'Ranveer', 'Akshay', 'Sharukh'];
@@ -20,7 +21,8 @@ function App() {
     nayoks.map(nayok => <li>{nayok}</li>)
   }
     {
-    products.map(product => <li>{product.name}</li>)
+    // products.map(product => <li>{product.name}</li>)
+     products.map(product => <UsersCom name={product.name}></UsersCom>)
   }
   {/* <li>{nayoks[0]}</li>
   <li>{nayoks[1]}</li>
@@ -52,7 +54,8 @@ function Users(){
     //console.log('calling effect');
     fetch('http://jsonplaceholder.typicode.com/users')
     .then(res => res.json())
-    .then(data => setUsers(data));
+    .then(data => setUsers(data))
+    .catch(error => console.log(error));
   }, [])
   return(
     <div>
