@@ -4,6 +4,7 @@ useEffect()
 Increase func- using setState()  
 Hooks-useState()  
 Map for dynamic  
+Pass object to components and access object  
 Props  
 Component define  
-JSX Syntax
+JSX syntax, Dynamic content, Dynamic Style in React   
